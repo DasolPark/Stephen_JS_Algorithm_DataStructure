@@ -44,5 +44,5 @@ module.exports = fib;
 //     result.push(a + b);
 //   }
 
-//   return result[n];
+//   return result[n]; // === result[result.length -1];
 // }
