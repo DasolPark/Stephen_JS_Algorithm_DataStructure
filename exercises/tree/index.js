@@ -39,7 +39,11 @@ class Tree {
     while (arr.length) {
       const node = arr.shift();
 
-      arr.push(...node.children);
+      arr.push(...node.children); // 1st solution
+      // 2nd solution
+      // for(let child of node.children){
+      //   arr.push(child);
+      // }
       fn(node);
     }
   }
