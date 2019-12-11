@@ -24,7 +24,7 @@ class Node {
 
   remove(data) {
     this.children = this.children.filter(node => {
-      node.data !== data;
+      return node.data !== data;
     });
   }
 }
@@ -44,6 +44,16 @@ class Tree {
       // for(let child of node.children){
       //   arr.push(child);
       // }
+      fn(node);
+    }
+  }
+
+  traverseDF(fn) {
+    const arr = [this.root];
+    while (arr.length) {
+      const node = arr.shift();
+
+      arr.unshift(...node.children);
       fn(node);
     }
   }
