@@ -19,3 +19,25 @@ function reverseInt(n) {
 }
 
 module.exports = reverseInt;
+
+// function reverseInt(n) {
+//   let rev = '';
+
+//   for (let num of n.toString()) {
+//     rev = num + rev;
+//   }
+
+//   return Math.sign(n) * parseInt(rev);
+// }
+
+// function reverseInt(n) {
+//   return (
+//     Math.sign(n) *
+//     parseInt(
+//       n
+//         .toString()
+//         .split('')
+//         .reduce((rev, num) => (rev = num + rev))
+//     )
+//   );
+// }
