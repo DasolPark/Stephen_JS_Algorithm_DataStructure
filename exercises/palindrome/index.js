@@ -22,3 +22,19 @@ module.exports = palindrome;
 //     .join();
 //   return str === reversed;
 // }
+
+// DS Ver.
+// function palindrome(str) {
+//   let rev = '';
+//
+//   for (let char of str) {
+//     rev = char + rev;
+//   }
+//
+//   return str === rev;
+// }
+
+// DS Ver.
+// function palindrome(str) {
+//   return str === str.split('').reduce((rev, char) => (rev = char + rev), '');
+// }
