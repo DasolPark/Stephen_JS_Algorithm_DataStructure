@@ -9,15 +9,29 @@
   <h1>Click the button</h1>
   <button>Me!</button>
   <script>
-    $('button').on('click', () => {
-      console.log('Hello');
-    });
-    $('button').on('click', () => {
-      console.log('There!');
-    });
+    // jQuery
+    // $('button').on('click', () => {
+    //   console.log('Hello');
+    // });
+    // $('button').on('click', () => {
+    //   console.log('There!');
+    // });
 
-    $('button').trigger('click');
+    // $('button').trigger('click');
 
-    $('button').off('click');
+    // $('button').off('click');
+
+    // Vanilla JavaScript
+    const btn = document.querySelector('button');
+
+    function handleClickEvent() {
+      console.log('Hi there!');
+    }
+
+    btn.addEventListener('click', handleClickEvent);
+
+    btn.click();
+
+    btn.removeEventListener('click', handleClickEvent);
   </script>
 </body>
